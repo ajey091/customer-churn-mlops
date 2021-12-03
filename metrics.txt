@@ -1,0 +1,4 @@
+Accuracy of KNN: 83.09%
+Accuracy of SVM: 85.77%
+Accuracy of Random Forest: 86.43%
+Accuracy of Decision Trees: 85.77%
