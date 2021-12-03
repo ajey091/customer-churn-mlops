@@ -86,9 +86,12 @@ percent4 = metrics.accuracy_score(y_test,prediction4)
 percent4
 
 models = pd.DataFrame({'name_model':["KNN","SVM","Random Forest","Decision Trees"],\
-                                'accuracy_percentage':[percent1,percent2,percent3,percent4]})
-print(models)
-models.plot.bar(x='name_model', y='accuracy_percentage', rot=0)
+                                'accuracy':[percent1,percent2,percent3,percent4]})
+
+
+models.to_csv('results.txt', sep='\t', index=False)
+
+models.plot.bar(x='name_model', y='accuracy', rot=0)
 plt.ylim((0.6,1))
 plt.xlabel('Model')
 plt.savefig('accuracies.png',dpi=120)
