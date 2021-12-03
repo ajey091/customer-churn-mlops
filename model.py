@@ -89,7 +89,15 @@ models = pd.DataFrame({'name_model':["KNN","SVM","Random Forest","Decision Trees
                                 'accuracy':[percent1,percent2,percent3,percent4]})
 
 
-models.to_csv('results.txt', sep='\t', index=False)
+# Write scores to a file
+with open("metrics.txt", 'w') as outfile:
+    outfile.write("Accuracy of KNN: %2.2f%%\n" % float(percent1*100))
+    outfile.write("Accuracy of SVM: %2.2f%%\n" % float(percent2*100))
+    outfile.write("Accuracy of Random Forest: %2.2f%%\n" % float(percent3*100))
+    outfile.write("Accuracy of Decision Trees: %2.2f%%\n" % float(percent4*100))
+
+
+#models.to_csv('results.txt', sep='\t', index=False)
 
 models.plot.bar(x='name_model', y='accuracy', rot=0)
 plt.ylim((0.6,1))
