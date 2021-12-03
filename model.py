@@ -91,10 +91,10 @@ models = pd.DataFrame({'name_model':["KNN","SVM","Random Forest","Decision Trees
 
 # Write scores to a file
 with open("metrics.txt", 'w') as outfile:
-    outfile.write("Accuracy of KNN: %2.2f%%\n" % percent1)
-    outfile.write("Accuracy of SVM: %2.2f%%\n" % percent2)
-    outfile.write("Accuracy of Random Forest: %2.2f%%\n" % percent3)
-    outfile.write("Accuracy of Decision Trees: %2.2f%%\n" % percent4)
+    outfile.write("Accuracy of KNN: %2.2f%%\n" % percent1*100)
+    outfile.write("Accuracy of SVM: %2.2f%%\n" % percent2*100)
+    outfile.write("Accuracy of Random Forest: %2.2f%%\n" % percent3*100)
+    outfile.write("Accuracy of Decision Trees: %2.2f%%\n" % percent4*100)
 
 
 #models.to_csv('results.txt', sep='\t', index=False)
